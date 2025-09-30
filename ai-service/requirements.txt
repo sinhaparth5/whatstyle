@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+transformers
+torch
+datasets
+python-dotenv
+pytest
+requests
+
