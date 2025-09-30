@@ -22,3 +22,27 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Python
+__pycache__/
+*.pyo
+*.pyc
+env/
+venv/
+*.egg-info/
+pip-wheel-metadata/
+build/
+dist/
+
+# AI Service Specific
+ai-service/data/
+ai-service/models/
+ai-service/.env
+
+# Common
+*.log
+*.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
