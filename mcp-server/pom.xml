@@ -11,8 +11,8 @@
 	<groupId>io.github.whatstyle</groupId>
 	<artifactId>mcp-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Whatstyle</name>
-	<description> A professional AI-powered WhatsApp chatbot built with a Java 21 (Spring Boot) MCP server for WhatsApp Business API </description>
+	<name>WhatStyle</name>
+	<description>A professional AI-powered WhatsApp chatbot built with a Java 21 (Spring Boot) MCP server for WhatsApp Business API</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -33,10 +33,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
@@ -49,16 +45,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-docker-compose</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-spring-boot-docker-compose</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
