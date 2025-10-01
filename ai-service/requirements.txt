@@ -1,10 +1,5 @@
-fastapi
-uvicorn
-pydantic
-transformers
+grpcio
+grpcio-tools
+numpy
 torch
-datasets
-python-dotenv
-pytest
-requests
-
+transformers
