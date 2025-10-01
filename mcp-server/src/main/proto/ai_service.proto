@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package aiservice;
+
+option java_multiple_files = true;
+option java_package = "io.github.whatstyle.grpc";
+option java_outer_classname = "AiServiceProto"
+
+service AIService {
+  rpc GenerateResponse(ChatRequest) returns (ChatResponse);
+  rpc TrainUserModel(TrainingRequest) returns (TrainingResponse);
+}
+
+message ChatRequest {
+  string user_id = 1;
+  string message = 2;
+  map<string, string> context = 3;
+}
+
+message ChatResponse {
+  string response = 1;
+  float confidence = 2;
+  int64 processing_time_ms = 3;
+}
+
+message TrainingRequest {
+  string user_id = 1;
+  bytes chat_data = 2;
+  string data_format = 3;
+}
+
+message TrainingResponse {
+  bool success = 1;
+  string message = 2;
+  int32 samples_processed = 3;
+}
