@@ -4,7 +4,7 @@ package aiservice;
 
 option java_multiple_files = true;
 option java_package = "io.github.whatstyle.grpc";
-option java_outer_classname = "AiServiceProto"
+option java_outer_classname = "AiServiceProto";
 
 service AIService {
   rpc GenerateResponse(ChatRequest) returns (ChatResponse);
@@ -14,7 +14,7 @@ service AIService {
 message ChatRequest {
   string user_id = 1;
   string message = 2;
-  map<string, string> context = 3;
+  map<string, string > context = 3;
 }
 
 message ChatResponse {

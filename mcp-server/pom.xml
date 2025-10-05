@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>21</java.version>
     <spring-ai.version>1.0.2</spring-ai.version>
-    <grpc.version>1.60.00</grpc.version>
+    <grpc.version>1.60.0</grpc.version>
     <protobuf.version>3.25.1</protobuf.version>
 	</properties>
 	<dependencies>
@@ -51,10 +51,24 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
     </dependency>
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-protobuf</artifactId>
       <version>${grpc.version}</version>
+    </dependency>
+	<dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-netty-shaded</artifactId>
+        <version>${grpc.version}</version>
+    </dependency>
+	<dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-stub</artifactId>
+        <version>${grpc.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>
@@ -113,12 +127,12 @@
           <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
         </configuration>
         <executions>
-          <extension>
+          <execution>
             <goals>
               <goal>compile</goal>
               <goal>compile-custom</goal>
             </goals>
-          </extension>
+          </execution>
         </executions>
       </plugin>
 			<plugin>
