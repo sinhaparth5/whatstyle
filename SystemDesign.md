@@ -137,7 +137,6 @@ graph TB
     style REDIS fill:#F44336
     style KAFKA fill:#607D8B
 ```
-```
 
 ### Chat Message Flow
 
@@ -180,6 +179,4 @@ sequenceDiagram
     end
     
     K->>K: Process Analytics Pipeline
-```
-```
 ```
